@@ -9,31 +9,30 @@
     <color name="white">#FFFFFFFF</color>
 
 
-    <color name="background">#FFFFFF</color>
+    <color name="background">#2C2B47</color>
 
-    <color name="mainText">#2C2B47</color>
-    <color name="sideText">#B9B8C6</color>
+    <color name="mainText">#FFFFFF</color>
+    <color name="sideText">#646379</color>
 
-    <color name="buttonbg">#2C2B47</color>
-    <color name="buttontext">#FFF1EF</color>
+    <color name="buttonbg">#FCAFB7</color>
+    <color name="buttontext">#2C2B47</color>
 
-    <color name="edcolor">#F2F2F3</color>
+    <color name="edcolor">#FFFFFF</color>
 
     <color name="htcolor">#2C2B47</color>
 
-    <color name="dhaccount">#B9B8C6</color>
-    <color name="signup">#2C2B47</color>
+    <color name="dhaccount">#646379</color>
+    <color name="signup">#FCAFB7</color>
 
-    <color name="cardcolor">#F2F2F3</color>
+    <color name="cardcolor">#646379</color>
+
 
     <color name="linearcolor">#ADDEE6</color>
     <color name="linearcolor2">#F6ADB6</color>
 
     <color name="lineartxtcolor">#FFFFFF</color>
 
-
-    <color name="lltextcolor">#2C2B47</color>
-    <color name="lltextcolor2">#87869E</color>
+    <color name="lltextcolor">#FCE152</color>
+    <color name="lltextcolor2">#FFFFFF</color>
     <color name="lltextcolor3">#B9B8C6</color>
-
 </resources>
