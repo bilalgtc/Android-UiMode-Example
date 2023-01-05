@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SignIn extends AppCompatActivity {
 
@@ -27,11 +28,18 @@ public class SignIn extends AppCompatActivity {
         email_txt=findViewById(R.id.txt1);
         password_txt=findViewById(R.id.txt2);
 
-        String email=email_ed.getText().toString();
+
         email_ed.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            String email=email_ed.getText().toString();
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus) {
+
+                if (email_ed.length()==0 && hasFocus){
+                    email_txt.setVisibility(View.INVISIBLE);
+                }else if (email_ed.length()!=0 && !hasFocus){
+                    email_txt.setVisibility(View.INVISIBLE);
+                }else if (email_ed.length()!=0 && hasFocus){
                     email_txt.setVisibility(View.INVISIBLE);
                 }else {
                     email_txt.setVisibility(View.VISIBLE);
@@ -40,11 +48,16 @@ public class SignIn extends AppCompatActivity {
         });
 
         password_ed.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            String password = password_ed.getText().toString();
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus){
-                   password_txt.setVisibility(View.INVISIBLE);
-                }else{
+                if (password_ed.length()==0 && hasFocus){
+                    password_txt.setVisibility(View.INVISIBLE);
+                }else if (password_ed.length()!=0 && !hasFocus){
+                    password_txt.setVisibility(View.INVISIBLE);
+                }else if (password_ed.length()!=0 && hasFocus){
+                    password_txt.setVisibility(View.INVISIBLE);
+                }else {
                     password_txt.setVisibility(View.VISIBLE);
                 }
             }
