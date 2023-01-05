@@ -35,4 +35,7 @@
     <color name="lltextcolor">#FCE152</color>
     <color name="lltextcolor2">#FFFFFF</color>
     <color name="lltextcolor3">#B9B8C6</color>
+
+    <color name="iconcolor">#FCAFB7</color>
+    <color name="iconcoloruncheck">#646379</color>
 </resources>

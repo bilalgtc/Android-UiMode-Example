@@ -36,4 +36,7 @@
     <color name="lltextcolor2">#87869E</color>
     <color name="lltextcolor3">#B9B8C6</color>
 
+    <color name="iconcolor">#2C2B47</color>
+    <color name="iconcoloruncheck">#E0DFE8</color>
+
 </resources>
