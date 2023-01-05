@@ -25,13 +25,5 @@ public class SignIn extends AppCompatActivity {
         });
     }
 
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        isDarkTheme();
-//    }
-//
-//    private boolean isDarkTheme() {
-//        return (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
-//    }
+
 }
