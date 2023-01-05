@@ -7,8 +7,13 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class SignIn extends AppCompatActivity {
+
+    EditText email_ed,password_ed;
+    TextView email_txt,password_txt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +21,34 @@ public class SignIn extends AppCompatActivity {
         setContentView(R.layout.activity_sign_in);
 
         AppCompatButton button = findViewById(R.id.signin_btn);
+        email_ed=findViewById(R.id.ed1);
+        password_ed=findViewById(R.id.ed2);
+
+        email_txt=findViewById(R.id.txt1);
+        password_txt=findViewById(R.id.txt2);
+
+        String email=email_ed.getText().toString();
+        email_ed.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    email_txt.setVisibility(View.INVISIBLE);
+                }else {
+                    email_txt.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        password_ed.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus){
+                   password_txt.setVisibility(View.INVISIBLE);
+                }else{
+                    password_txt.setVisibility(View.VISIBLE);
+                }
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,39 +11,55 @@
       android:id="@+id/imageView4"
       android:layout_width="@dimen/_15sdp"
       android:layout_height="@dimen/_15sdp"
+      android:layout_marginTop="@dimen/_35sdp"
       android:layout_marginStart="@dimen/_20sdp"
-      android:layout_marginTop="@dimen/_30sdp"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentStart="true"
       app:tint="@color/navcolor"
-      android:src="@drawable/drawer"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      android:src="@drawable/drawer" />
 
 
   <ImageView
       android:id="@+id/imageView5"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentEnd="true"
+      android:layout_marginTop="@dimen/_30sdp"
+      android:layout_marginEnd="@dimen/_20sdp"
       android:layout_width="@dimen/_25sdp"
       android:layout_height="@dimen/_25sdp"
-      android:layout_marginEnd="@dimen/_20sdp"
       android:src="@drawable/avatar"
       app:layout_constraintBottom_toBottomOf="@+id/imageView4"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
 
-  <androidx.appcompat.widget.SearchView
+  <LinearLayout
+      android:orientation="horizontal"
       android:id="@+id/searchView"
+      android:gravity="center_vertical"
       android:layout_width="match_parent"
+      android:layout_below="@+id/imageView5"
       android:layout_height="@dimen/_50sdp"
       android:layout_marginStart="@dimen/_20sdp"
       android:layout_marginTop="@dimen/_30sdp"
       android:layout_marginEnd="@dimen/_20sdp"
-      android:background="@drawable/search_style"
-      android:iconifiedByDefault="false"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/imageView4"
-      app:queryHint="Search"
-      app:searchIcon="@drawable/searchicon" />
+      android:background="@drawable/search_style">
+
+    <ImageView
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:src="@drawable/searchicon"
+        app:tint="@color/searchimgcolor"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@color/searchbarcolor"/>
+  </LinearLayout>
 
   <com.google.android.material.bottomnavigation.BottomNavigationView
       android:id="@+id/bottomNavigationView"
@@ -52,13 +68,11 @@
       android:background="@color/background"
       app:itemIconTint="@drawable/nav_icon"
       app:labelVisibilityMode="unlabeled"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.5"
-      app:layout_constraintStart_toStartOf="parent"
+      android:layout_alignParentBottom="true"
       app:menu="@menu/items" />
 
   <HorizontalScrollView
+      android:layout_below="@+id/searchView"
       android:id="@+id/horizontalScrollView"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -173,73 +187,14 @@
 
   </HorizontalScrollView>
 
-  <ScrollView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
+  <ListView
+
+      android:id="@+id/list_view"
       android:layout_marginTop="@dimen/_10sdp"
-      app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+    android:layout_below="@+id/horizontalScrollView"
+      android:layout_width="match_parent"
+      android:divider="@color/white"
+      android:layout_height="wrap_content"
+      android:layout_above="@id/bottomNavigationView"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-      <androidx.cardview.widget.CardView
-          android:id="@+id/cardView3"
-          android:layout_width="match_parent"
-          android:layout_height="@dimen/_165sdp"
-          android:layout_marginStart="@dimen/_20sdp"
-          android:layout_marginTop="@dimen/_15sdp"
-          android:layout_marginEnd="@dimen/_20sdp"
-          app:cardCornerRadius="@dimen/_20sdp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/img4"
-            app:layout_constraintEnd_toEndOf="parent"/>
-      </androidx.cardview.widget.CardView>
-
-      <androidx.cardview.widget.CardView
-          android:id="@+id/cardView4"
-          android:layout_width="match_parent"
-          android:layout_height="@dimen/_165sdp"
-          android:layout_marginStart="@dimen/_20sdp"
-          android:layout_marginTop="@dimen/_10sdp"
-          android:layout_marginEnd="@dimen/_20sdp"
-          app:cardCornerRadius="@dimen/_20sdp"
->
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/img5"
-            />
-      </androidx.cardview.widget.CardView>
-
-      <androidx.cardview.widget.CardView
-          android:layout_width="match_parent"
-          android:layout_height="@dimen/_165sdp"
-          android:layout_marginStart="@dimen/_20sdp"
-          android:layout_marginTop="@dimen/_10sdp"
-          android:layout_marginEnd="@dimen/_20sdp"
-          app:cardCornerRadius="@dimen/_20sdp"
-         >
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/img6" />
-
-      </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-  </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -45,4 +45,6 @@
 
     <color name="scrollcolor">#41405D</color>
     <color name="scrollcolortxt">#B9B8C6</color>
+
+    <color name="searchimgcolor">#262637</color>
 </resources>
