@@ -31,7 +31,6 @@ public class SignIn extends AppCompatActivity {
 
         email_ed.setOnFocusChangeListener(new View.OnFocusChangeListener() {
 
-            String email=email_ed.getText().toString();
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
 
@@ -48,7 +47,6 @@ public class SignIn extends AppCompatActivity {
         });
 
         password_ed.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            String password = password_ed.getText().toString();
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (password_ed.length()==0 && hasFocus){
