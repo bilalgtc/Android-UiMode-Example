@@ -13,13 +13,14 @@
       android:layout_height="@dimen/_15sdp"
       android:layout_marginStart="@dimen/_20sdp"
       android:layout_marginTop="@dimen/_30sdp"
+      app:tint="@color/navcolor"
       android:src="@drawable/drawer"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 
 
-
   <ImageView
+      android:id="@+id/imageView5"
       android:layout_width="@dimen/_25sdp"
       android:layout_height="@dimen/_25sdp"
       android:layout_marginEnd="@dimen/_20sdp"
@@ -30,20 +31,22 @@
 
 
   <androidx.appcompat.widget.SearchView
+      android:id="@+id/searchView"
       android:layout_width="match_parent"
       android:layout_height="@dimen/_50sdp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:queryHint="Search"
-      android:background="@drawable/search_style"
-      app:searchIcon="@drawable/searchicon"
       android:layout_marginStart="@dimen/_20sdp"
-      android:layout_marginEnd="@dimen/_20sdp"
       android:layout_marginTop="@dimen/_30sdp"
+      android:layout_marginEnd="@dimen/_20sdp"
+      android:background="@drawable/search_style"
       android:iconifiedByDefault="false"
+      app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+      app:layout_constraintTop_toBottomOf="@+id/imageView4"
+      app:queryHint="Search"
+      app:searchIcon="@drawable/searchicon" />
 
   <com.google.android.material.bottomnavigation.BottomNavigationView
+      android:id="@+id/bottomNavigationView"
       android:layout_width="match_parent"
       android:layout_height="@dimen/_60sdp"
       android:background="@color/background"
@@ -54,5 +57,189 @@
       app:layout_constraintHorizontal_bias="0.5"
       app:layout_constraintStart_toStartOf="parent"
       app:menu="@menu/items" />
+
+  <HorizontalScrollView
+      android:id="@+id/horizontalScrollView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/_20sdp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/searchView">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+      <LinearLayout
+          android:layout_width="@dimen/_85sdp"
+          android:layout_height="@dimen/_30sdp"
+          android:layout_marginStart="@dimen/_20sdp"
+          android:background="@drawable/btn_shape"
+          android:fontFamily="@font/abeezee"
+          android:gravity="center"
+          android:text="Start Now"
+          android:textAllCaps="false"
+          android:textSize="@dimen/_13sdp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abeezee"
+            android:text="All Courses"
+            android:textColor="@color/buttontext" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="@dimen/_85sdp"
+          android:layout_height="@dimen/_30sdp"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:background="@drawable/btn_shape"
+          android:backgroundTint="@color/scrollcolor"
+          android:fontFamily="@font/abeezee"
+          android:gravity="center"
+          android:text="Start Now"
+          android:textSize="@dimen/_13sdp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abeezee"
+            android:text="Identify"
+            android:textColor="@color/scrollcolortxt" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="@dimen/_85sdp"
+          android:layout_height="@dimen/_30sdp"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:background="@drawable/btn_shape"
+          android:backgroundTint="@color/scrollcolor"
+          android:fontFamily="@font/abeezee"
+          android:gravity="center"
+          android:text="Start Now"
+          android:textSize="@dimen/_13sdp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abeezee"
+            android:text="UI/UX"
+            android:textColor="@color/scrollcolortxt" />
+
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:layout_width="@dimen/_85sdp"
+          android:layout_height="@dimen/_30sdp"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:background="@drawable/btn_shape"
+          android:backgroundTint="@color/scrollcolor"
+          android:fontFamily="@font/abeezee"
+          android:gravity="center"
+          android:text="Start Now"
+          android:textSize="@dimen/_13sdp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abeezee"
+            android:text="Branding"
+            android:textColor="@color/scrollcolortxt" />
+
+      </LinearLayout>
+
+
+    </LinearLayout>
+
+  </HorizontalScrollView>
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginTop="@dimen/_10sdp"
+      app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <androidx.cardview.widget.CardView
+          android:id="@+id/cardView3"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_165sdp"
+          android:layout_marginStart="@dimen/_20sdp"
+          android:layout_marginTop="@dimen/_15sdp"
+          android:layout_marginEnd="@dimen/_20sdp"
+          app:cardCornerRadius="@dimen/_20sdp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img4"
+            app:layout_constraintEnd_toEndOf="parent"/>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+          android:id="@+id/cardView4"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_165sdp"
+          android:layout_marginStart="@dimen/_20sdp"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:layout_marginEnd="@dimen/_20sdp"
+          app:cardCornerRadius="@dimen/_20sdp"
+>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img5"
+            />
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_165sdp"
+          android:layout_marginStart="@dimen/_20sdp"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:layout_marginEnd="@dimen/_20sdp"
+          app:cardCornerRadius="@dimen/_20sdp"
+         >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img6" />
+
+      </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+  </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

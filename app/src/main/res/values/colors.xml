@@ -40,5 +40,9 @@
     <color name="iconcoloruncheck">#E0DFE8</color>
 
     <color name="searchbarcolor">#F2F2F2</color>
+    <color name="navcolor">#2C2B46</color>
+
+    <color name="scrollcolor">#F2F2F3</color>
+    <color name="scrollcolortxt">#9F9DBC</color>
 
 </resources>

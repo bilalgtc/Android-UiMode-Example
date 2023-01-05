@@ -74,7 +74,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/editText7" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/appCompatButton"
+                android:id="@+id/signin_btn"
                 android:layout_width="@dimen/_130sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_marginTop="@dimen/_30sdp"
@@ -100,7 +100,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/appCompatButton">
+                app:layout_constraintTop_toBottomOf="@+id/signin_btn">
 
                 <TextView
                     android:id="@+id/s_in_txt1"
