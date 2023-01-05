@@ -38,4 +38,6 @@
 
     <color name="iconcolor">#FCAFB7</color>
     <color name="iconcoloruncheck">#646379</color>
+
+    <color name="searchbarcolor">#4D4C6C</color>
 </resources>
