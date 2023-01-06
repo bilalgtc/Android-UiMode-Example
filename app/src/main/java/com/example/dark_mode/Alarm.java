@@ -53,89 +53,57 @@ public class Alarm extends AppCompatActivity {
         calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
 
-        txt1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                picker = new MaterialTimePicker.Builder()
-                        .setTimeFormat(TimeFormat.CLOCK_24H)
-                        .setHour(12)
-                        .setTitleText("Alarm Time")
-                        .build();
+        txt1.setOnClickListener(v -> {
+            picker = new MaterialTimePicker.Builder()
+                    .setTimeFormat(TimeFormat.CLOCK_24H)
+                    .setHour(12)
+                    .setTitleText("Alarm Time")
+                    .build();
 
-                picker.show(getSupportFragmentManager(), "Notify");
+            picker.show(getSupportFragmentManager(), "Notify");
 
-                picker.addOnPositiveButtonClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        txt1.setText(picker.getHour() +":"+picker.getMinute());
-                    }
-                });
+            picker.addOnPositiveButtonClickListener(v14 -> txt1.setText(picker.getHour() +":"+picker.getMinute()));
 
-            }
         });
 
-        txt2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                picker2 = new MaterialTimePicker.Builder()
-                        .setTimeFormat(TimeFormat.CLOCK_24H)
-                        .setHour(12)
-                        .setTitleText("Alarm Time")
-                        .build();
+        txt2.setOnClickListener(v -> {
+            picker2 = new MaterialTimePicker.Builder()
+                    .setTimeFormat(TimeFormat.CLOCK_24H)
+                    .setHour(12)
+                    .setTitleText("Alarm Time")
+                    .build();
 
-                picker2.show(getSupportFragmentManager(), "Notify");
+            picker2.show(getSupportFragmentManager(), "Notify");
 
-                picker2.addOnPositiveButtonClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        txt2.setText(picker2.getHour() +":"+picker2.getMinute());
-                    }
-                });
+            picker2.addOnPositiveButtonClickListener(v13 -> txt2.setText(picker2.getHour() +":"+picker2.getMinute()));
 
-            }
         });
 
-        txt3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                picker3 = new MaterialTimePicker.Builder()
-                        .setTimeFormat(TimeFormat.CLOCK_24H)
-                        .setHour(12)
-                        .setTitleText("Alarm Time")
-                        .build();
+        txt3.setOnClickListener(v -> {
+            picker3 = new MaterialTimePicker.Builder()
+                    .setTimeFormat(TimeFormat.CLOCK_24H)
+                    .setHour(12)
+                    .setTitleText("Alarm Time")
+                    .build();
 
-                picker3.show(getSupportFragmentManager(), "Notify");
+            picker3.show(getSupportFragmentManager(), "Notify");
 
-                picker3.addOnPositiveButtonClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        txt3.setText(picker3.getHour() +":"+picker3.getMinute());
-                    }
-                });
+            picker3.addOnPositiveButtonClickListener(v1 -> txt3.setText(picker3.getHour() +":"+picker3.getMinute()));
 
-            }
         });
 
 
-        txt4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                picker4 = new MaterialTimePicker.Builder()
-                        .setTimeFormat(TimeFormat.CLOCK_24H)
-                        .setHour(12)
-                        .setTitleText("Alarm Time")
-                        .build();
+        txt4.setOnClickListener(v -> {
+            picker4 = new MaterialTimePicker.Builder()
+                    .setTimeFormat(TimeFormat.CLOCK_24H)
+                    .setHour(12)
+                    .setTitleText("Alarm Time")
+                    .build();
 
-                picker4.show(getSupportFragmentManager(), "Notify");
+            picker4.show(getSupportFragmentManager(), "Notify");
 
-                picker4.addOnPositiveButtonClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        txt4.setText(picker4.getHour() +":"+picker4.getMinute());
-                    }
-                });
+            picker4.addOnPositiveButtonClickListener(v12 -> txt4.setText(picker4.getHour() +":"+picker4.getMinute()));
 
-            }
         });
 
 
@@ -300,19 +268,9 @@ public class Alarm extends AppCompatActivity {
         });
 
 
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startService(new Intent(getApplicationContext(),BackService.class));
-            }
-        });
+        b1.setOnClickListener(v -> startService(new Intent(getApplicationContext(),BackService.class)));
 
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                stopService(new Intent(getApplicationContext(),BackService.class));
-            }
-        });
+        b2.setOnClickListener(v -> stopService(new Intent(getApplicationContext(),BackService.class)));
     }
 
 
