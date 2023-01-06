@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.timepicker.MaterialTimePicker;
+import com.google.android.material.timepicker.TimeFormat;
 
 import java.util.Calendar;
 
@@ -27,7 +28,7 @@ public class Alarm extends AppCompatActivity {
     NotificationManager manager, manager2;
     TextView txt1, txt2, txt3, txt4;
     Calendar calendar;
-    MaterialTimePicker picker;
+    MaterialTimePicker picker,picker2,picker3,picker4;
     Button b1, b2;
 
     @Override
@@ -52,11 +53,96 @@ public class Alarm extends AppCompatActivity {
         calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
 
+        txt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                picker = new MaterialTimePicker.Builder()
+                        .setTimeFormat(TimeFormat.CLOCK_24H)
+                        .setHour(12)
+                        .setTitleText("Alarm Time")
+                        .build();
+
+                picker.show(getSupportFragmentManager(), "Notify");
+
+                picker.addOnPositiveButtonClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        txt1.setText(picker.getHour() +":"+picker.getMinute());
+                    }
+                });
+
+            }
+        });
+
+        txt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                picker2 = new MaterialTimePicker.Builder()
+                        .setTimeFormat(TimeFormat.CLOCK_24H)
+                        .setHour(12)
+                        .setTitleText("Alarm Time")
+                        .build();
+
+                picker2.show(getSupportFragmentManager(), "Notify");
+
+                picker2.addOnPositiveButtonClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        txt2.setText(picker2.getHour() +":"+picker2.getMinute());
+                    }
+                });
+
+            }
+        });
+
+        txt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                picker3 = new MaterialTimePicker.Builder()
+                        .setTimeFormat(TimeFormat.CLOCK_24H)
+                        .setHour(12)
+                        .setTitleText("Alarm Time")
+                        .build();
+
+                picker3.show(getSupportFragmentManager(), "Notify");
+
+                picker3.addOnPositiveButtonClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        txt3.setText(picker3.getHour() +":"+picker3.getMinute());
+                    }
+                });
+
+            }
+        });
+
+
+        txt4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                picker4 = new MaterialTimePicker.Builder()
+                        .setTimeFormat(TimeFormat.CLOCK_24H)
+                        .setHour(12)
+                        .setTitleText("Alarm Time")
+                        .build();
+
+                picker4.show(getSupportFragmentManager(), "Notify");
+
+                picker4.addOnPositiveButtonClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        txt4.setText(picker4.getHour() +":"+picker4.getMinute());
+                    }
+                });
+
+            }
+        });
+
 
         sw1.setOnCheckedChangeListener((buttonView, isChecked) -> {
 
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 0);
+            calendar.set(Calendar.HOUR_OF_DAY, picker.getHour());
+            calendar.set(Calendar.MINUTE, picker.getMinute());
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 CharSequence name = "Alarm";
@@ -94,8 +180,8 @@ public class Alarm extends AppCompatActivity {
 
         sw2.setOnCheckedChangeListener((buttonView, isChecked) -> {
 
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 0);
+            calendar.set(Calendar.HOUR_OF_DAY, picker2.getHour());
+            calendar.set(Calendar.MINUTE, picker2.getMinute());
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 CharSequence name2 = "Alarm2";
@@ -135,8 +221,8 @@ public class Alarm extends AppCompatActivity {
 
         sw3.setOnCheckedChangeListener((buttonView, isChecked) -> {
 
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 0);
+            calendar.set(Calendar.HOUR_OF_DAY, picker3.getHour());
+            calendar.set(Calendar.MINUTE, picker3.getMinute());
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 CharSequence name2 = "Alarm3";
@@ -175,8 +261,8 @@ public class Alarm extends AppCompatActivity {
 
         sw4.setOnCheckedChangeListener((buttonView, isChecked) -> {
 
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 0);
+            calendar.set(Calendar.HOUR_OF_DAY, picker4.getHour());
+            calendar.set(Calendar.MINUTE, picker4.getMinute());
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 CharSequence name2 = "Alarm3";

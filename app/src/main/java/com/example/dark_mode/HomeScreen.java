@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import com.example.dark_mode.Adapter.ListAdapter;
+
 public class HomeScreen extends AppCompatActivity {
 
     ListView listView;
