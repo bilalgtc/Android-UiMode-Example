@@ -14,7 +14,12 @@
         <!-- Customize your theme here. -->
     </style>
     
-    
+
+    <style name="edittext">
+
+        <item name="fontFamily">@font/abeezee</item>
+
+    </style>
 
 
 
